@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/csv"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -49,6 +50,7 @@ func prs(filePath string) []Record {
 	if err != nil {
 		log.Fatalln(err)
 	}
+	fmt.Println("what is rows? ", rows)
 
 	records := make([]Record, 0, len(rows))
 
